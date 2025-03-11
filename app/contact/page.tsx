@@ -102,7 +102,7 @@ const ContactUs = () => {
                                     <button
                                         type="submit"
                                         disabled={isSubmitting}
-                                        className={`w-full p-4 text-black rounded-lg ${isSubmitting ? "bg-gray-400" : "bg-blue-600 hover:bg-blue-700 focus:ring-2 focus:ring-blue-500"}`}
+                                        className={`w-full p-4  rounded-lg text-white ${isSubmitting ? "bg-gray-400" : "bg-blue-600 hover:bg-blue-700 focus:ring-2 focus:ring-blue-500"}`}
                                     >
                                         {isSubmitting ? "Submitting..." : "Send Message"}
                                     </button>

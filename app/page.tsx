@@ -3,14 +3,19 @@ import ImageScrollAnimation from "@/components/imageScrollAnimation";
 import OurCustomer from "@/components/ourCustomersDesign";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import ContactUs from "./contact/page";
 import Service from "./services/page";
 import AboutUs from "./about/page";
 
+import React from "react";
+import NavMenu from "@/components/NavMenu";
+
+
 export default function Home() {
+
   return (
     <>
+      <NavMenu />
       <div>
         <AuroraBackground>
           <img src="https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/270024778/original/421330dbaeb0069a57c3c9c7fb6d409077a60353/do-the-prefect-logl-design-and-background-removel.png" alt="Next Js Logo" width="150" height="150" />
@@ -57,3 +62,5 @@ export default function Home() {
     </>
   );
 }
+
+
