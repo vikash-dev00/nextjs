@@ -40,8 +40,98 @@ const NavMenu = () => {
                 "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
         },
     ]
+    const electronicsComponents: { title: string; href: string; description: string }[] = [
+        {
+            title: "Laptop & Accessories",
+            href: "/products/electronics/laptop_accessories",
+            description:
+                "A modal dialog that interrupts the user with important content and expects a response.",
+        },
+        {
+            title: "AC & Cooler",
+            href: "/docs/primitives/hover-card",
+            description:
+                "For sighted users to preview content available behind a link.",
+        },
+        {
+            title: "Fridge & Washing Machine",
+            href: "/docs/primitives/progress",
+            description:
+                "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+        },
+        {
+            title: "Audio & Speaker",
+            href: "/docs/primitives/scroll-area",
+            description: "Visually or semantically separates content.",
+        },
+    ]
+    const beautyAndToysComponents: { title: string; href: string; description: string }[] = [
+        {
+            title: "Mens and Gromming",
+            href: "/docs/primitives/alert-dialog",
+            description:
+                "A modal dialog that interrupts the user with important content and expects a response.",
+        },
+        {
+            title: "Foods and Drinks",
+            href: "/docs/primitives/hover-card",
+            description:
+                "For sighted users to preview content available behind a link.",
+        },
+        {
+            title: "Fridge & Washing Machine",
+            href: "/docs/primitives/progress",
+            description:
+                "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+        },
+        {
+            title: "Baby Care",
+            href: "/docs/primitives/scroll-area",
+            description: "Visually or semantically separates content.",
+        },
+        {
+            title: "Toys",
+            href: "/docs/primitives/scroll-area",
+            description: "Visually or semantically separates content.",
+        },
+        {
+            title: "Sports and Fitness",
+            href: "/docs/primitives/scroll-area",
+            description: "Visually or semantically separates content.",
+        },
+        {
+            title: "Nutrition and Health Care",
+            href: "/docs/primitives/scroll-area",
+            description: "Visually or semantically separates content.",
+        },
+    ]
+    const mobilesComponents: { title: string; href: string; description: string }[] = [
+        {
+            title: "Smartphones",
+            href: "/docs/primitives/alert-dialog",
+            description:
+                "A modal dialog that interrupts the user with important content and expects a response.",
+        },
+        {
+            title: "Mobile Case",
+            href: "/docs/primitives/hover-card",
+            description:
+                "For sighted users to preview content available behind a link.",
+        },
+        {
+            title: "Keypad Phone",
+            href: "/docs/primitives/progress",
+            description:
+                "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+        },
+        {
+            title: "Adapter & Power Bank",
+            href: "/docs/primitives/scroll-area",
+            description: "Visually or semantically separates content.",
+        },
+    ]
     return (
-        <div className="flex justify-center items-center gap-8 bg-rose-50 shadow-xl m-2 text-lg">
+        <div className="flex justify-center items-center gap-8 bg-blue-50 shadow-xl m-2 text-lg">
             <NavigationMenu>
                 <NavigationMenuList>
                     <NavigationMenuItem>
@@ -49,7 +139,7 @@ const NavMenu = () => {
                         <NavigationMenuTrigger>Electronics</NavigationMenuTrigger>
                         <NavigationMenuContent>
                             <ul className="gap-3 grid md:grid-cols-2 p-4 w-[400px] md:w-[500px] lg:w-[600px]">
-                                {components.map((component) => (
+                                {electronicsComponents.map((component) => (
                                     <ListItem
                                         key={component.title}
                                         title={component.title}
@@ -66,7 +156,7 @@ const NavMenu = () => {
                         <NavigationMenuTrigger>Beauty & Toys</NavigationMenuTrigger>
                         <NavigationMenuContent>
                             <ul className="gap-3 grid md:grid-cols-2 p-4 w-[400px] md:w-[500px] lg:w-[600px]">
-                                {components.map((component) => (
+                                {beautyAndToysComponents.map((component) => (
                                     <ListItem
                                         key={component.title}
                                         title={component.title}
@@ -83,7 +173,7 @@ const NavMenu = () => {
                         <NavigationMenuTrigger>Mobiles</NavigationMenuTrigger>
                         <NavigationMenuContent>
                             <ul className="gap-3 grid md:grid-cols-2 p-4 w-[400px] md:w-[500px] lg:w-[600px]">
-                                {components.map((component) => (
+                                {mobilesComponents.map((component) => (
                                     <ListItem
                                         key={component.title}
                                         title={component.title}

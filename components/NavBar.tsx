@@ -4,9 +4,7 @@ import React from 'react'
 import { FloatingNav } from './ui/floating-navbar';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Search, ShoppingCart } from 'lucide-react';
-import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from './ui/navigation-menu';
-import { cn } from '@/lib/utils';
+import { House, KeySquare, LogOut, Search, ShoppingCart } from 'lucide-react';
 
 const NavBar = () => {
     const isAdmin = true;
@@ -23,10 +21,10 @@ const NavBar = () => {
                 </div>
                 <div className='flex items-center gap-5 text-black'>
 
-                    <Link href="/"><span className='max-sm:hidden font-sans text-4'>Home</span></Link>
-                    <button><span className='max-sm:hidden font-sans text-2'><ShoppingCart className='size-4' /></span></button>
-                    <Link href="/"><span className='max-sm:hidden font-sans text-4'>Logout</span></Link>
-                    <Link href={isAdmin ? "/auth/admin/login" : "/auth/user/login"}><span className='max-sm:hidden font-sans text-4'>Login</span></Link>
+                    <Link href="/"><span className='max-sm:hidden font-sans text-4'><House className='size-6' /></span></Link>
+                    <button><span className='max-sm:hidden font-sans text-2'><ShoppingCart className='size-6' /></span></button>
+                    <Link href="/"><span className='max-sm:hidden font-sans text-4'><LogOut className='size-6' /></span></Link>
+                    <Link href={isAdmin ? "/auth/admin/login" : "/auth/user/login"}><span className='max-sm:hidden font-sans text-4'><KeySquare className='size-6' /></span></Link>
                 </div>
             </nav>
         </header>
